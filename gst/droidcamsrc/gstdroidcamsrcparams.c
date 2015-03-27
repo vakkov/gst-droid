@@ -290,7 +290,7 @@ gst_droidcamsrc_params_get_video_caps (GstDroidCamSrcParams * params)
   GstCaps *caps;
 
   g_mutex_lock (&params->lock);
-  caps = gst_droidcamsrc_params_get_caps_locked (params, "video-size-values",
+  caps = gst_droidcamsrc_params_get_caps_locked (params, "preview-size-values", // check CameraHal.cpp (omap4xxx)
       "video/x-raw", GST_CAPS_FEATURE_MEMORY_DROID_VIDEO_META_DATA, "YV12");
   g_mutex_unlock (&params->lock);
 
